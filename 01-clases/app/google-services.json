@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "852718941874",
+    "project_id": "etap-2024a-sw-gr2",
+    "storage_bucket": "etap-2024a-sw-gr2.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:852718941874:android:8a8a4c53e22664a74bfbab",
+        "android_client_info": {
+          "package_name": "com.example.a2024aswgr2etap"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB1V6FvynBOnqgcaPg4T6csA06M28d9zss"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
