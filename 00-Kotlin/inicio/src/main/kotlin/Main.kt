@@ -7,7 +7,7 @@ fun main() {
     //inmutable= "Erika" //¡ERROR!
 
     // Mutables
-    var mutable: String = "Erika"
+    val mutable: String = "Erika"
     mutable= "Tatiana"
 
     // VAL > VAR
