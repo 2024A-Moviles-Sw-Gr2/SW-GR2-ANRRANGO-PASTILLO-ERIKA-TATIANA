@@ -14,11 +14,14 @@ class Crud {
     // Registra un nuevo producto
     fun registrarProducto(producto: Producto) {
         val categoriaExiste = categorias.any { it.obtenerID() == producto.obtenerIDCategoria() }
-        if (categoriaExiste) {
+        val idRepetido = productos.any { it.obtenerID() == producto.obtenerID() }
+        if (categoriaExiste && !idRepetido) {
             productos.add(producto)
             println("Producto registrado con éxito!\n")
+            // Actualizar la cantidad de productos asociados a cada categoría
+            categorias.forEach { it.modificarCantidadProductos(obtenerCantidadProductosAsociados(it.obtenerID())) }
         } else {
-            println("No existe la categoria, producto no registrado!\n")
+            println("Categoria repetida o PK repetida, producto no registrado!\n")
         }
     }
 
@@ -67,6 +70,8 @@ class Crud {
         val eliminado = productos.removeIf { it.obtenerID() == idProducto }
         if (eliminado) {
             println("Producto eliminado con éxito!\n")
+            // Actualizar la cantidad de productos asociados a cada categoría
+            categorias.forEach { it.modificarCantidadProductos(obtenerCantidadProductosAsociados(it.obtenerID())) }
         } else {
             println("El producto no está registrado. Revise los datos proporcionados!!\n")
         }
@@ -74,8 +79,16 @@ class Crud {
 
     // Registra una nueva categoria
     fun registrarCategoria(categoria: Categoria) {
-        categorias.add(categoria)
-        println("Categoria registrado con éxito!\n")
+        val idRepetido = categorias.any { it.obtenerID() == categoria.obtenerID() }
+        if (!idRepetido) {
+            categorias.add(categoria)
+            println("Categoria registrado con éxito!\n")
+        } else {
+            println("Categoria repetida, categoria no registrada!\n")
+        }
+    }
+    private fun obtenerCantidadProductosAsociados(idCategoria: Int): Int {
+        return productos.count { it.obtenerIDCategoria() == idCategoria }
     }
 
     // Consulta todas las categorias

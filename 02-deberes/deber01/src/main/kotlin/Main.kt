@@ -28,8 +28,8 @@ fun main() {
 private fun mostrarEntidades() {
     val menuEntidades = """
         === ENTIDADES DISPONIBLES ===
-        1. Producto
-        2. Categoria
+        1. Categoria
+        2. Producto
         0. Salir
     """.trimIndent()
     println(menuEntidades)
@@ -61,44 +61,44 @@ private fun mostrarMenu(input: Scanner, crud: Crud, opcionEntidad: Int) {
         when (opcionCrud) {
             1 -> {
                 if (opcionEntidad.equals(1)) {
-                    val producto = insertarDatosProducto(input)
-                    crud.registrarProducto(producto)
-                    crud.guardarArchivos()
-                }
-                if (opcionEntidad.equals(2)) {
                     val categoria = insertarDatosCategoria(input)
                     crud.registrarCategoria(categoria)
                     crud.guardarArchivos()
                 }
+                if (opcionEntidad.equals(2)) {
+                    val producto = insertarDatosProducto(input)
+                    crud.registrarProducto(producto)
+                    crud.guardarArchivos()
+                }
             }
             2 -> {
-                if (opcionEntidad.equals(1)) crud.consultarProductos() else crud.consultarCategorias()
+                if (opcionEntidad.equals(1)) crud.consultarCategorias() else crud.consultarProductos()
             }
             3 -> {
                 if (opcionEntidad.equals(1)) {
-                    print("Ingrese el ID del producto a actualizar: ")
-                    val idProducto = input.nextInt()
-                    crud.actualizarProducto(idProducto, input)
-                    crud.guardarArchivos()
-                }
-                if (opcionEntidad.equals(2)) {
                     print("Ingrese el ID de la categoria a actualizar: ")
                     val idCategoria = input.nextInt()
                     crud.actualizarCategoria(idCategoria, input)
                     crud.guardarArchivos()
                 }
+                if (opcionEntidad.equals(2)) {
+                    print("Ingrese el ID del producto a actualizar: ")
+                    val idProducto = input.nextInt()
+                    crud.actualizarProducto(idProducto, input)
+                    crud.guardarArchivos()
+                }
             }
             4 -> {
                 if (opcionEntidad.equals(1)) {
-                    print("Ingrese el ID del producto a eliminar: ")
-                    val idProducto = input.nextInt()
-                    crud.eliminarProducto(idProducto)
-                    crud.guardarArchivos()
-                }
-                if (opcionEntidad.equals(2)) {
                     print("Ingrese el ID de la categoria a eliminar: ")
                     val idCategoria = input.nextInt()
                     crud.eliminarCategoria(idCategoria)
+                    crud.guardarArchivos()
+                }
+                if (opcionEntidad.equals(2)) {
+                    print("Ingrese el ID del producto a eliminar: ")
+                    val idProducto = input.nextInt()
+                    crud.eliminarProducto(idProducto)
                     crud.guardarArchivos()
                 }
             }
@@ -120,9 +120,8 @@ fun insertarDatosCategoria(input: Scanner): Categoria {
     val nombreCategoria = input.next()
     print("Descripcion de la categoria: ")
     val descripcion: String = input.next()
-    print("Ingrese el numero de productos asociados: ")
-    val cantidadProductos = input.nextInt()
-    val fechaActual: Date = Date.from(Instant.now())
+    val cantidadProductos = 0 //Productos asociados automatizado
+    val fechaActual: Date = Date.from(Instant.now()) //Por cada modificacion
     print("¿Está visible la categoria (true/false)?: ")
     val visible = input.nextBoolean()
 
