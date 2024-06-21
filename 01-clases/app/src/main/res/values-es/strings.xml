@@ -1,3 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <string name="saludo">Hola mundo</string>
+    <string name="textoColor">Ejemplo</string>
+    <string name="textoFondo">Ejemplo en espanol</string>
+
 </resources>

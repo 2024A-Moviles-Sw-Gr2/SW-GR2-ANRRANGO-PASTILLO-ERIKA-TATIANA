@@ -1,3 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <color name="colorTexto">#FF00FF00</color>
+    <color name="colorFondoVertical">#FF800080</color>
+    <color name="colorFondoHorizontal">#FFC0C0C0</color>
 </resources>
