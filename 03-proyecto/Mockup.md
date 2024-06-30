@@ -1,0 +1,1 @@
+Link de acceso al [Mockup de FocusFlex](https://www.figma.com/design/FE1eE2vaEaHr3Jz8gDWeY5/Focusflex?node-id=0-1&t=DpiuZP7ummx6xpoQ-1).
