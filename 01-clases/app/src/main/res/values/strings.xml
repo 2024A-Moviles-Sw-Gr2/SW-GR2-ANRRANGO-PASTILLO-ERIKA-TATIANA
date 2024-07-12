@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">2024ASWGR2ETAP</string>
     <string name="saludo">Hello word</string>
-    <string name="textoColor">Example</string>
+    <string name="textoColor">Menu</string>
     <string name="textoFondo">Example background</string>
 
     <string-array name="string_array_opciones">
