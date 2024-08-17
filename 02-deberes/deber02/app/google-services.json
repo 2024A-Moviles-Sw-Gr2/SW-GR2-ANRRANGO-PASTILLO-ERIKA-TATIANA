@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "237750833906",
+    "project_id": "etap-2024a-sw-gr2-deberes",
+    "storage_bucket": "etap-2024a-sw-gr2-deberes.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:237750833906:android:db7392ab49ec057aac766b",
+        "android_client_info": {
+          "package_name": "com.example.deber02etap"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAO7E78JiiPQ9ua3a9Ok0kNqCneL6RsdiY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
