@@ -50,6 +50,17 @@ class GGoogleMapsActivity : AppCompatActivity() {
         }
     }
 
+    fun moverQuicentro() {
+        val zoom = 17f
+        val quicentro = LatLng(
+            -0.1755181190138262, -78.47918808450619
+        )
+        val titulo = "Quicentro"
+        val markQuicentro = anadirMarcador(quicentro, titulo)
+        markQuicentro.tag = titulo
+        moverCamaraConZoom(quicentro, zoom)
+    }
+
     fun iniciarLogicaMapa() {
         val fragmentoMapa = supportFragmentManager
             .findFragmentById(R.id.map) as SupportMapFragment
@@ -63,17 +74,6 @@ class GGoogleMapsActivity : AppCompatActivity() {
                 escucharListeners()
             }
         }
-    }
-
-    fun moverQuicentro() {
-        val zoom = 17f
-        val quicentro = LatLng(
-            -0.1755181190138262, -78.47918808450619
-        )
-        val titulo = "Quicentro"
-        val markQuicentro = anadirMarcador(quicentro, titulo)
-        markQuicentro.tag = titulo
-        moverCamaraConZoom(quicentro, zoom)
     }
 
     fun establecerConfiguracionMapa() {

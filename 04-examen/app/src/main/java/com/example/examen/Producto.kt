@@ -37,9 +37,18 @@ class Producto : AppCompatActivity() {
         configurarInsets()
         inicializarCategoriaActual()
         configurarListaProductos()
+        configurarBotonMapa()
         configurarBotonCrearProducto()
 
         registerForContextMenu(findViewById(R.id.lv_productos))
+    }
+
+    private fun configurarBotonMapa() {
+        findViewById<Button>(R.id.btn_verEnMapa).setOnClickListener {
+            val intent = Intent(this, GoogleMaps::class.java)
+            intent.putExtra("categoria", categoriaActual)
+            startActivityForResult(intent, Categoria.REQUEST_CODE_ADD_OR_EDIT)
+        }
     }
 
     // Configura los insets de la ventana para gestionar la UI.
@@ -158,5 +167,10 @@ class Producto : AppCompatActivity() {
     // Filtra los productos por la categoría actual utilizando SQLite.
     private fun obtenerProductosFiltrados(): List<EntrenadorProducto> {
         return sqliteHelperProducto.obtenerProductosPorCategoria(categoriaActual.id)
+    }
+
+    // Implementa la lógica para obtener productos de la base de datos
+    fun obtenerProductos(): List<EntrenadorProducto> {
+        return sqliteHelperProducto.obtenerTodosLosProductos() // Suponiendo que tienes este método
     }
 }

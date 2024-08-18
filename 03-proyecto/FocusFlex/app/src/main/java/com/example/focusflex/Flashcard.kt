@@ -24,7 +24,7 @@ class Flashcard : AppCompatActivity() {
         dbHelper = FlashcardDatabaseHelper(this)
         linearLayout = findViewById(R.id.lyContainerFlashcard)
 
-        // Cargar y mostrar los botones de los temas (ej. SCRUM, XP)
+        // Cargar y mostrar los botones de los temas
         loadFlashcardButtons()
 
         // Botón para agregar un nuevo tema de flashcard

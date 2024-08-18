@@ -3,4 +3,5 @@
     <string name="universidad">ESCUELA POLITECNICA NACIONAL</string>
     <string name="autora">Autora: Erika Anrrango</string>
     <string name="title_activity_google_maps">GoogleMapsInicio</string>
+    <string name="title_activity_google_maps_inicio">GoogleMapsInicio</string>
 </resources>

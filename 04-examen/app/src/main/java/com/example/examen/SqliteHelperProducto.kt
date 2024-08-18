@@ -76,4 +76,27 @@ class SqliteHelperProducto(context: Context) : SQLiteOpenHelper(context, "produc
         cursor.close()
         return listaProductos
     }
+
+    fun obtenerTodosLosProductos(): List<EntrenadorProducto> {
+        val listaProductos = mutableListOf<EntrenadorProducto>()
+        val db = readableDatabase
+        val cursor = db.query("Producto", null, null, null, null, null, null)
+
+        with(cursor) {
+            while (moveToNext()) {
+                val id = getInt(getColumnIndexOrThrow("id"))
+                val nombre = getString(getColumnIndexOrThrow("nombre"))
+                val precio = getDouble(getColumnIndexOrThrow("precio"))
+                val fechaCreacion = getString(getColumnIndexOrThrow("fechaCreacion"))
+                val enStock = getInt(getColumnIndexOrThrow("enStock")) == 1
+                val categoriaID = getInt(getColumnIndexOrThrow("categoriaID"))
+
+                listaProductos.add(
+                    EntrenadorProducto(id, nombre, precio, fechaCreacion, enStock, categoriaID)
+                )
+            }
+        }
+        cursor.close()
+        return listaProductos
+    }
 }
