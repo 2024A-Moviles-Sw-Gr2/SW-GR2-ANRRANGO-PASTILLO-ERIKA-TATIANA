@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "532334995577",
+    "project_id": "etap-2024a-sw-gr2-examen",
+    "storage_bucket": "etap-2024a-sw-gr2-examen.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:532334995577:android:b0688e6319d8d732024ca8",
+        "android_client_info": {
+          "package_name": "com.example.examen"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBBJ_llKERDBBa9CAzAWiT3giLLS6TQ2bk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

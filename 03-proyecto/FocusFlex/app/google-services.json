@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "314940114523",
+    "project_id": "etap-2024a-sw-gr2-proyecto",
+    "storage_bucket": "etap-2024a-sw-gr2-proyecto.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:314940114523:android:fe969570e7df2d0d5da17e",
+        "android_client_info": {
+          "package_name": "com.example.focusflex"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD1LmQvoFFm8hFRSpl0poOHQl68S6IPOiU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
